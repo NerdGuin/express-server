@@ -14,7 +14,7 @@ app.use(limiter);
 app.use(require('./events/api.js'));
 
 app.listen(port, () => {
-    connect();
+    // connect();
     Console.sendMessage('INFO', `API started on port ${port}`);
 });
 
