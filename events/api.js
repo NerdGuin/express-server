@@ -4,9 +4,8 @@ module.exports = (function () {
     const { version } = require('../package.json');
 
     router.get('/api', function (req, res) {
-        res.json({ code: 200, message: 'API is working in version v' + version });
+        res.send(200, { code: 200, message: 'API is working in version v' + version });
     });
 
     return router;
 })();
-
