@@ -5,8 +5,12 @@ const { MongoClient, ObjectId } = require('mongodb');
 const dbClient = new MongoClient(process.env.DATABASE_URL);
 
 async function connect() {
-    await dbClient.connect();
-    Console.sendMessage('INFO', 'Connected to the database.');
+    try {
+        await dbClient.connect();
+        Console.sendMessage('INFO', 'Connected to the database.');
+    } catch (error) {
+        Console.sendMessage('ERROR', error);
+    }
 }
 
 async function getUser(usr) {
