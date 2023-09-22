@@ -11,10 +11,11 @@ const limiter = rateLimit({
     message: { message: 'Too many requests, please try again later' }
 });
 app.use(limiter);
-app.use(require('./events/api.js'));
+// app.use(require('./events/api.js'));
 
 app.get('/', function (req, res) {
-    res.status(200).send({ message: 'Hi' });
+    // res.status(200).send({ message: 'Hi' });
+    res.send(200, { message: 'Hi' });
 });
 
 app.listen(port, () => {
