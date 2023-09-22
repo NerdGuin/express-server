@@ -2,6 +2,8 @@
 
 Esta é uma API simples construída com o framework Express.js em Node.js.
 
+<img src='https://i.imgur.com/4WVbH1k.png' style="height: 128px;"/><img src='https://i.imgur.com/nH3T2iK.png' style="height: 128px;"/><img src='https://i.imgur.com/y2FLWGx.png' style="height: 128px;"/>
+
 ## Rotas
 
 - `GET /api`: Obtém detalhes essenciais sobre a API, incluindo a versão atual.
