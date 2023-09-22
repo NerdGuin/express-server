@@ -13,7 +13,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/events/(.*).js"
+        "dest": "/events/api.js"
       }
     ]
   }
