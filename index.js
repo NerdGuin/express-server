@@ -3,7 +3,7 @@ const rateLimit = require('express-rate-limit');
 const app = express();
 const port = 3000;
 const Console = require('./objects/console.js');
-const { connect } = require('./events/dbMananger.js');
+// const { connect } = require('./events/dbMananger.js');
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 });
 
 app.listen(port, () => {
-    connect();
+    // connect();
     Console.sendMessage('INFO', `API started on port ${port}`);
 });
 
