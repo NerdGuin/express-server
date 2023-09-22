@@ -5,6 +5,8 @@ Esta é uma API simples construída com o framework Express.js em Node.js.
 ## Rotas
 
 - `GET /api`: Obtém detalhes essenciais sobre a API, incluindo a versão atual.
+- `GET /api/users`: Obtém a lista de usuários.
+- `GET /api/users/:id`: Obtém informações sobre um usuário específico.
 
 ## Pré-requisitos
 
@@ -19,3 +21,7 @@ Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em s
 
    ```shell
    git clone https://github.com/NerdGuin/express-server.git
+   
+2. Na raiz do seu projeto, crie um arquivo chamado ``.env``. Dentro desse arquivo, defina a variável ``DATABASE_URL`` e atribua a ela o valor da URL do seu banco de dados MongoDB.
+    ```shell
+    DATABASE_URL=mongodb+srv://username:password@cluster.mongodb.net
