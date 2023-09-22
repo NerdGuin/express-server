@@ -12,10 +12,6 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(require('./events/api.js'));
 
-app.get('/', (req, res) => {
-    res.send({ code: 200, message: '' });
-});
-
 app.listen(port, () => {
     Console.sendMessage('INFO', `API started on port ${port}`);
 });
