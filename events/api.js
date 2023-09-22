@@ -2,7 +2,7 @@ module.exports = (function () {
     'use strict';
     var router = require('express').Router();
     const { version } = require('../package.json');
-    const { getAllUsers, getUser } = require('./dbMananger.js');
+    const { getUser } = require('./dbMananger.js');
 
     router.get('/api', function (req, res) {
         res.status(200).send({ message: 'API working successfully', version: version });
