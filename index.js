@@ -13,6 +13,10 @@ const limiter = rateLimit({
 app.use(limiter);
 app.use(require('./events/api.js'));
 
+app.get('/', function (req, res) {
+    res.status(200).send({ message: 'Hi' });
+});
+
 app.listen(port, () => {
     // connect();
     Console.sendMessage('INFO', `API started on port ${port}`);
