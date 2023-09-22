@@ -1,6 +1,13 @@
-const { app } = require('../index.js');
 const { version } = require('../package.json');
 
-app.get('/api', (req, res) => {
-    res.send({ code: 200, message: 'API is working in version v' + version });
-});
+module.exports = (function () {
+    'use strict';
+    var router = require('express').Router();
+
+    router.get('/api', function (req, res) {
+        res.json({ code: 200, message: 'API is working in version v' + version });
+    });
+
+    return router;
+})();
+
