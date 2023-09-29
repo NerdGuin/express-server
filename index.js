@@ -1,7 +1,7 @@
 const express = require('express');
 const rateLimit = require('express-rate-limit');
 const app = express();
-const port = 3000;
+const port = 80;
 const Console = require('./objects/console.js');
 const { connect } = require('./events/dbMananger.js');
 
