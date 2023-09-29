@@ -17,7 +17,7 @@ async function getUser(usr) {
     const db = dbClient.db('user'); const collection = db.collection('users');
 
     try {
-        if(!usr) {
+        if (!usr) {
             const getAllUsers = await collection.find({}).toArray();
             return getAllUsers;
         }
@@ -26,7 +26,7 @@ async function getUser(usr) {
         if (getUserByName.length !== 0) return getUserByName[0];
 
         const getUserById = await collection.find({ _id: new ObjectId(usr) }).toArray();
-        if (getUserById.length !== 0) return filteredDocs[0];
+        if (getUserById.length !== 0) return getUserById[0];
     } catch (error) {
         // Console.sendMessage('ERROR', error);
         return null;
